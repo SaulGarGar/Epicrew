@@ -29,7 +29,7 @@ object Versions{
     const val koin = "2.1.1"
     const val koinViewModel = "2.1.1"
 
-    const val glide = "4.5.0"
+    const val glide = "4.10.0"
 }
 
 object Kotlin {

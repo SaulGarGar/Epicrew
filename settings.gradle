@@ -1,4 +1,7 @@
 rootProject.name='Epicrew'
 include ':app'
 include ':buildSrc'
-include ':Network'
+include ':network'
+include ':androidext'
+include ':domain'
+include ':gnomedata'

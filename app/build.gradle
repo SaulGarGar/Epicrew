@@ -22,6 +22,8 @@ android {
         versionName App.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "BASE_URL", '"https://raw.githubusercontent.com/rrafols/mobile_test/master/"'
     }
 
     buildTypes {

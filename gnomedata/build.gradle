@@ -1,0 +1,70 @@
+import com.saulgargar.buildsrc.AndroidX
+import com.saulgargar.buildsrc.Chuck
+import com.saulgargar.buildsrc.Koin
+import com.saulgargar.buildsrc.Kotlin
+import com.saulgargar.buildsrc.Modules
+import com.saulgargar.buildsrc.Retrofit
+import com.saulgargar.buildsrc.Testing
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+
+        buildConfigField "String", "DEBUG", 'true'
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(Modules.androidExt)
+    implementation project(Modules.domain)
+
+    implementation project(Modules.network)
+
+    implementation Kotlin.kotlinStandard
+
+    implementation AndroidX.appCompat
+    implementation AndroidX.core
+
+    implementation Retrofit.retrofit
+    implementation Retrofit.moshiConverter
+    implementation Retrofit.loggingInterceptor
+    implementation Retrofit.okhttp
+
+    implementation Koin.koin
+
+    debugImplementation Chuck.chuck
+    releaseImplementation Chuck.chuckLibraryNoOp
+
+    //testImplementation Testing.mock
+
+    testImplementation Testing.junit
+    androidTestImplementation Testing.runner
+    androidTestImplementation Testing.expresso
+    //testImplementation Testing.coroutinesTest
+    //testImplementation Testing.spekDsl
+    //testImplementation Testing.spekRunner
+}
