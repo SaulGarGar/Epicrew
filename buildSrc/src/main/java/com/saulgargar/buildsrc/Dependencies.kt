@@ -23,6 +23,8 @@ object Versions{
     const val retrofit = "2.7.2"
     const val gson = "2.7.2"
     const val okhttp = "4.4.0"
+    const val loggingInterceptor = "3.12.0"
+    const val chuck = "1.1.0"
 
     const val koin = "2.1.1"
     const val koinViewModel = "2.1.1"
@@ -66,8 +68,14 @@ object ViewModel {
 
 object Retrofit  {
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-    const val gson = "com.squareup.retrofit2:converter-gson:${Versions.gson}"
+    const val moshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
     const val okhttp = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
+    const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
+}
+
+object Chuck {
+    const val chuck = "com.readystatesoftware.chuck:library:${Versions.chuck}"
+    const val chuckLibraryNoOp = "com.readystatesoftware.chuck:library-no-op:${Versions.chuck}"
 }
 
 object Koin {

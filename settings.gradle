@@ -1,3 +1,4 @@
 rootProject.name='Epicrew'
 include ':app'
 include ':buildSrc'
+include ':Network'
