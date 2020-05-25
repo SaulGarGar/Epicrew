@@ -1,17 +1,25 @@
+import com.saulgargar.buildsrc.AndroidX
+import com.saulgargar.buildsrc.App
+import com.saulgargar.buildsrc.DefaultConfig
+import com.saulgargar.buildsrc.Glide
+import com.saulgargar.buildsrc.Google
+import com.saulgargar.buildsrc.Kotlin
+import com.saulgargar.buildsrc.Testing
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion DefaultConfig.compileSdkVersion
+    buildToolsVersion DefaultConfig.buildToolsVersion
 
     defaultConfig {
         applicationId "com.saulgargar.epicrew"
-        minSdkVersion 23
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion DefaultConfig.minSdkVersion
+        targetSdkVersion DefaultConfig.targetSdkVersion
+        versionCode App.versionCode
+        versionName App.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -23,15 +31,32 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation Kotlin.kotlinStandard
+
+    implementation AndroidX.lifecycle
+
+    implementation AndroidX.lifecycle
+    implementation AndroidX.lifecycleExtensions
+    implementation AndroidX.legacy
+    implementation AndroidX.appCompat
+    implementation AndroidX.core
+    implementation AndroidX.constraintlayout
+
+    implementation Google.material
+
+    implementation Glide.glide
 }
