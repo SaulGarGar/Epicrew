@@ -1,10 +1,12 @@
 package com.saulgargar.gnomedata.data.datasource.remote.model
 
+import com.saulgargar.gnomedata.domain.model.GnomeUser
 import com.squareup.moshi.Json
+import com.squareup.moshi.Types
 
 class GnomeInfoResponse (
     @field:Json(name = "Brastlewark")
-    val brastlewark: ArrayList<GnomeInfoItemResponse>)
+    val brastlewark: List<GnomeInfoItemResponse>)
 
 class GnomeInfoItemResponse (
     @field:Json(name = "id")
@@ -26,10 +28,27 @@ class GnomeInfoItemResponse (
     val height: Float,
 
     @field:Json(name = "hair_color")
-    val hairColor: Int,
+    val hairColor: String,
 
     @field:Json(name = "professions")
-    val professions: ArrayList<String>,
+    val professions: List<String>,
 
     @field:Json(name = "friends")
-    val friends: ArrayList<String>)
+    val friends: List<String>)
+
+fun GnomeInfoResponse.toDomain() : List<GnomeUser>{
+    val gnomeList = mutableListOf<GnomeUser>()
+    for (gnome in brastlewark){
+        gnomeList.add(GnomeUser(
+            id = gnome.id,
+            name = gnome.name,
+            thumbNail = gnome.thumbNail,
+            age = gnome.age,
+            weight = gnome.weight,
+            height = gnome.height,
+            hairColor = gnome.hairColor,
+            professions = gnome.professions,
+            friends = gnome.friends))
+    }
+    return gnomeList
+}

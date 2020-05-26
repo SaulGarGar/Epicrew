@@ -3,12 +3,17 @@ import com.saulgargar.buildsrc.App
 import com.saulgargar.buildsrc.DefaultConfig
 import com.saulgargar.buildsrc.Glide
 import com.saulgargar.buildsrc.Google
+import com.saulgargar.buildsrc.Koin
 import com.saulgargar.buildsrc.Kotlin
+import com.saulgargar.buildsrc.Modules
+import com.saulgargar.buildsrc.NavigationComponents
 import com.saulgargar.buildsrc.Testing
+import com.saulgargar.buildsrc.ThirdPartyLibrary
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     compileSdkVersion DefaultConfig.compileSdkVersion
@@ -47,9 +52,11 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation Kotlin.kotlinStandard
+    implementation project(Modules.androidExt)
+    implementation project(Modules.domain)
+    implementation project(Modules.gnomeData)
 
-    implementation AndroidX.lifecycle
+    implementation Kotlin.kotlinStandard
 
     implementation AndroidX.lifecycle
     implementation AndroidX.lifecycleExtensions
@@ -58,7 +65,16 @@ dependencies {
     implementation AndroidX.core
     implementation AndroidX.constraintlayout
 
+    implementation NavigationComponents.navFragment
+    implementation NavigationComponents.navUiKtx
+
+    implementation Koin.koin
+    implementation Koin.koinViewModel
+
     implementation Google.material
 
     implementation Glide.glide
+
+    implementation ThirdPartyLibrary.timber
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }

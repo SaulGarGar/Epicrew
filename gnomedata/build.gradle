@@ -4,6 +4,7 @@ import com.saulgargar.buildsrc.Koin
 import com.saulgargar.buildsrc.Kotlin
 import com.saulgargar.buildsrc.Modules
 import com.saulgargar.buildsrc.Retrofit
+import com.saulgargar.buildsrc.Room
 import com.saulgargar.buildsrc.Testing
 
 apply plugin: 'com.android.library'
@@ -23,7 +24,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
 
-        buildConfigField "String", "DEBUG", 'true'
+        buildConfigField "String", "BASE_URL", '"https://raw.githubusercontent.com/rrafols/mobile_test/master/"'
 
     }
 
@@ -55,6 +56,10 @@ dependencies {
     implementation Retrofit.okhttp
 
     implementation Koin.koin
+
+    implementation Room.room
+    implementation Room.roomCorutinesSupport
+    implementation Room.annotationProcessor
 
     debugImplementation Chuck.chuck
     releaseImplementation Chuck.chuckLibraryNoOp

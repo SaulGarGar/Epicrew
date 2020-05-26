@@ -30,6 +30,10 @@ object Versions{
     const val koinViewModel = "2.1.1"
 
     const val glide = "4.10.0"
+
+    const val room = "2.2.5"
+
+    const val timber = "4.7.1"
 }
 
 object Kotlin {
@@ -59,7 +63,7 @@ object Testing {
 
 object NavigationComponents {
     const val navFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navFragment}"
-    const val navUiKtx = "androidx.core:core-ktx:${Versions.navUiKtx}"
+    const val navUiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navUiKtx}"
 }
 
 object ViewModel {
@@ -87,6 +91,12 @@ object Glide {
     const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
 }
 
-object ThirdPartyLibrary {
+object Room {
+    const val room = "androidx.room:room-runtime:${Versions.room}"
+    const val annotationProcessor = "androidx.room:room-compiler:${Versions.room}"
+    const val roomCorutinesSupport = "androidx.room:room-ktx:${Versions.room}"
+}
 
+object ThirdPartyLibrary {
+    const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
 }

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".presentation.fragment.SplashFragment">
+
+    <FrameLayout
+        android:layout_width="230dp"
+        android:layout_height="220dp"
+        android:layout_marginBottom="40dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/helmetIv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_armor"
+            android:layout_gravity="center_horizontal"
+            android:tint="@color/colorAccent"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_shield"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="38dp"
+            android:layout_marginTop="70dp"
+            android:tint="@color/colorAccent"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:src="@drawable/ic_sword"
+            android:layout_gravity="center_horizontal"
+            android:rotation="330"
+            android:tint="@color/colorAccent"/>
+
+        <TextView
+            android:fontFamily="@font/caladea_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="@string/app_name"
+            android:layout_marginBottom="14dp"
+            android:textColor="@color/white_text"
+            android:textSize="36sp"/>
+
+        <TextView
+            android:fontFamily="@font/caladea_bold_italic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginStart="40dp"
+            android:text="@string/brastlewark"
+            android:textColor="@color/red"
+            android:textSize="12sp"/>
+
+    </FrameLayout>
+
+</FrameLayout>

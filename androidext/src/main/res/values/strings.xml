@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Epicrew</string>
+
+    <string name="failure_network_connection">Network Error</string>
+    <string name="failure_unavailable">Unknown Error</string>
+
+</resources>
