@@ -59,7 +59,7 @@ dependencies {
 
     implementation Room.room
     implementation Room.roomCorutinesSupport
-    implementation Room.annotationProcessor
+    annotationProcessor Room.annotationProcessor
 
     debugImplementation Chuck.chuck
     releaseImplementation Chuck.chuckLibraryNoOp
