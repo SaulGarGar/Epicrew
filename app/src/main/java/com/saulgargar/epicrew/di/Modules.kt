@@ -25,6 +25,6 @@ private val loadFeature by lazy {
 
 val viewModelModule: Module = module {
     viewModel {
-        GnomeDataViewModel(getGnomeDataUseCase = get())
+        GnomeDataViewModel(recoverGnomesUseCase = get(), saveGnomesUseCase = get())
     }
 }

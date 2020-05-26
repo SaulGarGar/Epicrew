@@ -34,6 +34,7 @@ object Versions{
     const val room = "2.2.5"
 
     const val timber = "4.7.1"
+    const val debugDb = "1.0.6"
 }
 
 object Kotlin {
@@ -92,11 +93,11 @@ object Glide {
 }
 
 object Room {
-    const val room = "androidx.room:room-runtime:${Versions.room}"
-    const val annotationProcessor = "androidx.room:room-compiler:${Versions.room}"
-    const val roomCorutinesSupport = "androidx.room:room-ktx:${Versions.room}"
+    const val roomKtx = "androidx.room:room-ktx:${Versions.room}"
+    const val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
 }
 
 object ThirdPartyLibrary {
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
+    const val debugDb = "com.amitshekhar.android:debug-db:${Versions.debugDb}"
 }

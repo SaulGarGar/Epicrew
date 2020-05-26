@@ -6,10 +6,12 @@ import com.saulgargar.buildsrc.Modules
 import com.saulgargar.buildsrc.Retrofit
 import com.saulgargar.buildsrc.Room
 import com.saulgargar.buildsrc.Testing
+import com.saulgargar.buildsrc.ThirdPartyLibrary
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -57,12 +59,13 @@ dependencies {
 
     implementation Koin.koin
 
-    implementation Room.room
-    implementation Room.roomCorutinesSupport
-    annotationProcessor Room.annotationProcessor
+    implementation Room.roomKtx
+    kapt Room.roomCompiler
 
     debugImplementation Chuck.chuck
     releaseImplementation Chuck.chuckLibraryNoOp
+
+    debugImplementation ThirdPartyLibrary.debugDb
 
     //testImplementation Testing.mock
 

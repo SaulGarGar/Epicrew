@@ -8,6 +8,7 @@ abstract class UseCase<out Type, in Params> where Type : Any {
 
     abstract suspend fun run(params: Params): Either<Failure, Type>
 
+
     open operator fun invoke(
         scope: CoroutineScope,
         params: Params,

@@ -5,19 +5,20 @@ import com.saulgargar.gnomedata.BuildConfig
 import com.saulgargar.gnomedata.BuildConfig.BASE_URL
 import com.saulgargar.gnomedata.data.datasource.local.GnomeDataBase
 import com.saulgargar.gnomedata.data.datasource.local.GnomesLocalDataSource
-import com.saulgargar.gnomedata.data.datasource.local.GnomesLocalDataSourceImplementation
 import com.saulgargar.gnomedata.data.datasource.remote.GnomesApi
 import com.saulgargar.gnomedata.data.datasource.remote.GnomesRemoteDataSource
 import com.saulgargar.gnomedata.data.repository.GnomesRepository
 import com.saulgargar.gnomedata.data.repository.GnomesRepositoryImpl
-import com.saulgargar.gnomedata.domain.usecase.GetGnomeDataUseCase
+import com.saulgargar.gnomedata.domain.usecase.RecoverGnomesUseCase
+import com.saulgargar.gnomedata.domain.usecase.SaveGnomesUseCase
 import com.saulgargar.network.createNetworkClient
 import org.koin.core.module.Module
 import org.koin.dsl.module
 import retrofit2.Retrofit
 
 val useCaseModule: Module = module {
-    factory { GetGnomeDataUseCase(repository = get()) }
+    factory { RecoverGnomesUseCase(repository = get()) }
+    factory { SaveGnomesUseCase(repository = get()) }
 }
 
 val repositoryModule: Module = module {
@@ -26,11 +27,14 @@ val repositoryModule: Module = module {
 
 val dataSourceModule: Module = module {
     single { GnomesRemoteDataSource(gnomesApi = get()) }
-    single { GnomesLocalDataSourceImplementation(get()) }
+    single { GnomesLocalDataSource(gnomeDao = get(), hairColorDao = get(), professionDao = get()) as GnomesLocalDataSource}
 }
 
 val dbModule: Module = module {
-    single { GnomeDataBase.build(get()).gnomeDao() }
+    single { GnomeDataBase.build(context = get()) }
+    single { get<GnomeDataBase>().getGnomeDao() }
+    single { get<GnomeDataBase>().getHairColorDao() }
+    single { get<GnomeDataBase>().getProfessionDao() }
 }
 
 val networkModule: Module = module {

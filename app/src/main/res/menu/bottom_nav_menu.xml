@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/expertFinderNavFragment"
+        android:icon="@drawable/ic_tools"
+        android:title="@string/find_your_expert" />
+
+    <item
+        android:id="@+id/nameFinderNavFragment"
+        android:icon="@drawable/ic_name"
+        android:title="@string/by_name" />
+
+    <item
+        android:id="@+id/creatureFinderNavFragment"
+        android:icon="@drawable/ic_gnome"
+        android:title="@string/creature_finder" />
+
+</menu>

@@ -5,25 +5,28 @@ import androidx.lifecycle.viewModelScope
 import com.saulgargar.domain.Failure
 import com.saulgargar.domain.UseCase
 import com.saulgargar.gnomedata.domain.model.GnomeUser
-import com.saulgargar.gnomedata.domain.usecase.GetGnomeDataUseCase
+import com.saulgargar.gnomedata.domain.usecase.RecoverGnomesUseCase
+import com.saulgargar.gnomedata.domain.usecase.SaveGnomesUseCase
 
-class GnomeDataViewModel (private val getGnomeDataUseCase: GetGnomeDataUseCase): ViewModel(){
-
-
-
+class GnomeDataViewModel (private val recoverGnomesUseCase: RecoverGnomesUseCase,
+                          private val saveGnomesUseCase: SaveGnomesUseCase): ViewModel(){
 
     fun getGnomeData() {
-        getGnomeDataUseCase.invoke(viewModelScope, UseCase.None()) {
-            it.either(::handleDataFailure, ::handleDataSuccess)
+        recoverGnomesUseCase.invoke(viewModelScope, UseCase.None()) {
+            it.either(::handleGnomeDataFailure, ::handleGnomeDataSuccess)
         }
     }
 
-    private fun handleDataSuccess(gnomes: List<GnomeUser>) {
+    private fun handleGnomeDataSuccess(gnomes: List<GnomeUser>) {
         obtainAllProfessions(gnomes)
         obtainAllHairColors(gnomes)
+        val params = SaveGnomesUseCase.Params(gnomes)
+        saveGnomesUseCase.invoke(viewModelScope,params){
+            it
+        }
     }
 
-    private fun handleDataFailure(failure: Failure) {
+    private fun handleGnomeDataFailure(failure: Failure) {
         failure.toString()
     }
 

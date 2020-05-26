@@ -6,4 +6,5 @@
     <color name="white_text">#FAFAFA</color>
     <color name="red">#b71c1c</color>
     <color name="full_black">#000000</color>
+    <color name="full_white">#FFFFFF</color>
 </resources>
