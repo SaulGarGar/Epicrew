@@ -29,12 +29,12 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="creauresFinderFragment">
+                  <entry key="creaturesFinderFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="477" />
+                            <option name="x" value="460" />
                             <option name="y" value="797" />
                           </Point>
                         </option>
@@ -112,6 +112,15 @@
                             <option name="x" value="109" />
                             <option name="y" value="275" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_splashFragment_to_nameFinderFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

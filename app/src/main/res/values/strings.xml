@@ -7,4 +7,6 @@
     <string name="find_your_expert">Find an expert</string>
     <string name="by_name">Name search</string>
     <string name="creature_finder">Creature finder</string>
+    <string name="profession">profession</string>
+    <string name="expert_finder_instructions">Select a profession to see \na list of experts in town</string>
 </resources>

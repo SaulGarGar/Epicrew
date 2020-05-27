@@ -1,5 +1,6 @@
 package com.saulgargar.epicrew.di
 
+import com.saulgargar.epicrew.presentation.viewmodel.ExpertFinderViewModel
 import com.saulgargar.epicrew.presentation.viewmodel.SplashViewModel
 import com.saulgargar.gnomedata.di.*
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -26,5 +27,9 @@ private val loadFeature by lazy {
 val viewModelModule: Module = module {
     viewModel {
         SplashViewModel(getGnomesUseCase = get())
+    }
+
+    viewModel {
+        ExpertFinderViewModel(recoverProfessionsUseCase = get())
     }
 }

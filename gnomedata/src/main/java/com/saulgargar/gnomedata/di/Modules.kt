@@ -10,6 +10,7 @@ import com.saulgargar.gnomedata.data.datasource.remote.GnomesRemoteDataSource
 import com.saulgargar.gnomedata.data.repository.GnomesRepository
 import com.saulgargar.gnomedata.data.repository.GnomesRepositoryImpl
 import com.saulgargar.gnomedata.domain.usecase.GetGnomesUseCase
+import com.saulgargar.gnomedata.domain.usecase.RecoverProfessionsUseCase
 import com.saulgargar.gnomedata.domain.usecase.SaveGnomesUseCase
 import com.saulgargar.network.createNetworkClient
 import org.koin.core.module.Module
@@ -19,6 +20,7 @@ import retrofit2.Retrofit
 val useCaseModule: Module = module {
     factory { GetGnomesUseCase(repository = get()) }
     factory { SaveGnomesUseCase(repository = get()) }
+    factory { RecoverProfessionsUseCase(repository = get()) }
 }
 
 val repositoryModule: Module = module {

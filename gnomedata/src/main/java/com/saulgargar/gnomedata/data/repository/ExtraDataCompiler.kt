@@ -1,5 +1,6 @@
 package com.saulgargar.gnomedata.data.repository
 
+import com.saulgargar.androidext.cleanSpaces
 import com.saulgargar.gnomedata.data.datasource.local.entity.HairColorDB
 import com.saulgargar.gnomedata.data.datasource.local.entity.ProfessionDB
 import com.saulgargar.gnomedata.data.datasource.remote.model.GnomeInfoItemResponse
@@ -12,7 +13,7 @@ object ExtraDataCompiler {
 
         for (gnome in gnomes){
             for (profession in gnome.professions){
-                professions.add(profession)
+                professions.add(profession.cleanSpaces())
             }
         }
 
