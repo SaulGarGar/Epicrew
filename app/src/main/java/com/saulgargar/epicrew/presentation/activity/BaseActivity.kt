@@ -22,10 +22,6 @@ abstract class BaseActivity: AppCompatActivity() {
         supportActionBar?.hide()
     }
 
-    abstract fun showProgress()
-
-    abstract fun hideProgress()
-
     fun handleFailure(failure: Failure) {
         when (failure) {
             is Failure.NetworkConnection -> snackbar(window.decorView.rootView, R.string.failure_network_connection).showError()

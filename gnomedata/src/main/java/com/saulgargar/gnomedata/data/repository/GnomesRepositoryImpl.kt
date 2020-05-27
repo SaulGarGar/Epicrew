@@ -17,7 +17,15 @@ class GnomesRepositoryImpl(private val networkHandler: NetworkHandler,
 
     override suspend fun getGnomes() = try {
         when (networkHandler.isConnected) {
-            true -> Either.Right(remoteDataSource.getGnomeData().toDomain())
+            true -> {
+                val result = remoteDataSource.getGnomeData()
+
+                localDataSource.saveGnomes(result.toDomain())
+                localDataSource.saveProfessions(ExtraDataCompiler.getAllProfessions(result.brastlewark))
+                localDataSource.saveHairColors(ExtraDataCompiler.getAllHairColors(result.brastlewark))
+
+                Either.Right(localDataSource.recoverGnomes())
+            }
             else -> Either.Left(Failure.NetworkConnection)
         }
     } catch (ex: Exception) {

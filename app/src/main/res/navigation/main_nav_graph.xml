@@ -9,7 +9,11 @@
         android:id="@+id/splashFragment"
         android:name="com.saulgargar.epicrew.presentation.fragment.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" />
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_nameFinderFragment"
+            app:destination="@id/nameFinderFragment" />
+    </fragment>
     <fragment
         android:id="@+id/expertFinderFragment"
         android:name="com.saulgargar.epicrew.presentation.fragment.ExpertFinderFragment"
@@ -47,7 +51,7 @@
             app:argType="com.saulgargar.epicrew.presentation.model.Gnome" />
     </fragment>
     <fragment
-        android:id="@+id/creauresFinderFragment"
+        android:id="@+id/creaturesFinderFragment"
         android:name="com.saulgargar.epicrew.presentation.fragment.CreauresFinderFragment"
         android:label="fragment_creaures_finder"
         tools:layout="@layout/fragment_creaures_finder" >

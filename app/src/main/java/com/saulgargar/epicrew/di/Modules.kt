@@ -1,6 +1,6 @@
 package com.saulgargar.epicrew.di
 
-import com.saulgargar.epicrew.presentation.viewmodel.GnomeDataViewModel
+import com.saulgargar.epicrew.presentation.viewmodel.SplashViewModel
 import com.saulgargar.gnomedata.di.*
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.loadKoinModules
@@ -25,6 +25,6 @@ private val loadFeature by lazy {
 
 val viewModelModule: Module = module {
     viewModel {
-        GnomeDataViewModel(recoverGnomesUseCase = get(), saveGnomesUseCase = get())
+        SplashViewModel(getGnomesUseCase = get())
     }
 }
