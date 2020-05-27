@@ -8,11 +8,13 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.saulgargar.epicrew.R
 import com.saulgargar.epicrew.di.injectFeatures
+import com.saulgargar.epicrew.presentation.utils.Loader
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
 
     private lateinit var navController: NavController
+    lateinit var loader: Loader
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +23,7 @@ class MainActivity : BaseActivity() {
 
         initBottomNavBar()
         setBottomVisivility()
+        initLoader()
         window.navigationBarColor = resources.getColor(R.color.full_black)
     }
 
@@ -57,4 +60,7 @@ class MainActivity : BaseActivity() {
         nav_view.visibility = View.GONE
     }
 
+    private fun initLoader(){
+        loader = Loader(this,supportFragmentManager)
+    }
 }

@@ -30,6 +30,7 @@ class ExpertFinderFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        getActivityContext().loader.show()
         initViews(view)
         initObservers()
         initListeners()
@@ -44,10 +45,14 @@ class ExpertFinderFragment : BaseFragment() {
         state?.let { noNullState ->
             when (noNullState) {
                 is State.Success -> {
+                    getActivityContext().loader.dismiss()
                     val result = noNullState.responseTo<List<Profession>>()
                     initProfessionDropDown(professions = result)
                 }
-                is State.Failed -> getActivityContext().handleFailure(failure = noNullState.failure)
+                is State.Failed -> {
+                    getActivityContext().loader.dismiss()
+                    getActivityContext().handleFailure(failure = noNullState.failure)
+                }
                 else -> Timber.d("any state in getGnomes")
             }
         }

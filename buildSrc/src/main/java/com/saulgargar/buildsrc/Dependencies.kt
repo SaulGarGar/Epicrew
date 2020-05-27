@@ -35,6 +35,8 @@ object Versions{
 
     const val timber = "4.7.1"
     const val debugDb = "1.0.6"
+    const val lottie = "3.4.0"
+    const val materialDialogs = "3.3.0"
 }
 
 object Kotlin {
@@ -100,4 +102,6 @@ object Room {
 object ThirdPartyLibrary {
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
     const val debugDb = "com.amitshekhar.android:debug-db:${Versions.debugDb}"
+    const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"
+    const val materialDialogs = "com.afollestad.material-dialogs:core:${Versions.materialDialogs}"
 }

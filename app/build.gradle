@@ -76,5 +76,6 @@ dependencies {
     implementation Glide.glide
 
     implementation ThirdPartyLibrary.timber
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation ThirdPartyLibrary.lottie
+    implementation ThirdPartyLibrary.materialDialogs
 }
