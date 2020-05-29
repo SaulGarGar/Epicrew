@@ -8,4 +8,5 @@
     <color name="full_black">#000000</color>
     <color name="full_white">#FFFFFF</color>
     <color name="background">#EEEEEE</color>
+    <color name="secondary_text">#757575</color>
 </resources>

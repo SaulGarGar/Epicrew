@@ -9,7 +9,6 @@ import com.saulgargar.androidext.showWarning
 import com.saulgargar.androidext.snackbar
 import com.saulgargar.domain.Failure
 import com.saulgargar.epicrew.R
-import timber.log.Timber
 
 abstract class BaseActivity: AppCompatActivity() {
 
@@ -29,7 +28,5 @@ abstract class BaseActivity: AppCompatActivity() {
             is Failure.GenericError -> snackbar(window.decorView.rootView, R.string.failure_unavailable).showError()
             else -> snackbar(window.decorView.rootView, R.string.failure_unavailable).showNeutral()
         }
-
-        Timber.d("HandleFailure: ${window.decorView.rootView} == Failure: $failure")
     }
 }

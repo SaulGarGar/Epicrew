@@ -21,7 +21,6 @@ object Versions{
     const val lifeCycleExtensions = "2.2.0"
 
     const val retrofit = "2.7.2"
-    const val gson = "2.7.2"
     const val okhttp = "4.4.0"
     const val loggingInterceptor = "3.12.0"
     const val chuck = "1.1.0"
@@ -33,7 +32,6 @@ object Versions{
 
     const val room = "2.2.5"
 
-    const val timber = "4.7.1"
     const val debugDb = "1.0.6"
     const val lottie = "3.4.0"
     const val materialDialogs = "3.3.0"
@@ -100,7 +98,6 @@ object Room {
 }
 
 object ThirdPartyLibrary {
-    const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
     const val debugDb = "com.amitshekhar.android:debug-db:${Versions.debugDb}"
     const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"
     const val materialDialogs = "com.afollestad.material-dialogs:core:${Versions.materialDialogs}"

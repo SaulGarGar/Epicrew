@@ -30,6 +30,6 @@ val viewModelModule: Module = module {
     }
 
     viewModel {
-        ExpertFinderViewModel(recoverProfessionsUseCase = get())
+        ExpertFinderViewModel(recoverProfessionsUseCase = get(), recoverGnomesUseCase = get())
     }
 }

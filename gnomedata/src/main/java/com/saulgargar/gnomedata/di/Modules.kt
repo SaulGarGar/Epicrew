@@ -10,6 +10,7 @@ import com.saulgargar.gnomedata.data.datasource.remote.GnomesRemoteDataSource
 import com.saulgargar.gnomedata.data.repository.GnomesRepository
 import com.saulgargar.gnomedata.data.repository.GnomesRepositoryImpl
 import com.saulgargar.gnomedata.domain.usecase.GetGnomesUseCase
+import com.saulgargar.gnomedata.domain.usecase.RecoverGnomesUseCase
 import com.saulgargar.gnomedata.domain.usecase.RecoverProfessionsUseCase
 import com.saulgargar.gnomedata.domain.usecase.SaveGnomesUseCase
 import com.saulgargar.network.createNetworkClient
@@ -21,6 +22,7 @@ val useCaseModule: Module = module {
     factory { GetGnomesUseCase(repository = get()) }
     factory { SaveGnomesUseCase(repository = get()) }
     factory { RecoverProfessionsUseCase(repository = get()) }
+    factory { RecoverGnomesUseCase(repository = get()) }
 }
 
 val repositoryModule: Module = module {

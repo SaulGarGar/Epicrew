@@ -50,14 +50,14 @@
         android:label="fragment_gnome_profile"
         tools:layout="@layout/fragment_gnome_profile" >
         <argument
-            android:name="gnome"
-            app:argType="com.saulgargar.epicrew.presentation.model.Gnome" />
+            android:name="gnomeId"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/creaturesFinderFragment"
-        android:name="com.saulgargar.epicrew.presentation.fragment.CreauresFinderFragment"
+        android:name="com.saulgargar.epicrew.presentation.fragment.CreaturesFinderFragment"
         android:label="fragment_creaures_finder"
-        tools:layout="@layout/fragment_creaures_finder" >
+        tools:layout="@layout/fragment_creatures_finder" >
         <action
             android:id="@+id/action_creauresFinderFragment_to_creatureFinderResultsFragment"
             app:destination="@id/creatureFinderResultsFragment" />

@@ -17,7 +17,9 @@ fun ImageView.setUrl(url: String) {
 
 fun ImageView.setUrlCircle(url: String) {
     Glide.with(this.context)
+        .asBitmap()
         .load(url)
+        .override(1600, 1600)
         .circleCrop()
         .into(this)
 }

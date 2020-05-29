@@ -75,7 +75,6 @@ dependencies {
 
     implementation Glide.glide
 
-    implementation ThirdPartyLibrary.timber
     implementation ThirdPartyLibrary.lottie
     implementation ThirdPartyLibrary.materialDialogs
 }

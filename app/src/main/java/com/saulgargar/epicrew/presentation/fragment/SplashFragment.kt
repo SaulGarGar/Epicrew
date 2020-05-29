@@ -12,7 +12,6 @@ import com.saulgargar.domain.State
 import com.saulgargar.epicrew.R
 import com.saulgargar.epicrew.presentation.viewmodel.SplashViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import timber.log.Timber
 
 class SplashFragment : BaseFragment() {
 
@@ -37,7 +36,6 @@ class SplashFragment : BaseFragment() {
             when (noNullState) {
                 is State.Success -> goToApp()
                 is State.Failed -> getActivityContext().handleFailure(failure = noNullState.failure)
-                else -> Timber.d("any state in getGnomes")
             }
         }
     }
