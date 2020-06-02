@@ -9,4 +9,14 @@
     <string name="creature_finder">Creature finder</string>
     <string name="profession">profession</string>
     <string name="expert_finder_instructions">Select a profession to see \na list of experts in town</string>
+    <string name="age">Age</string>
+    <string name="zero">0</string>
+    <string name="one_thousand">1000</string>
+    <string name="weight">Weight</string>
+    <string name="one_hundred">100</string>
+    <string name="height">Height</string>
+    <string name="hair_color">Hair color</string>
+    <string name="Search">search</string>
+    <string name="find_by_name">Find by name</string>
+    <string name="dash">-</string>
 </resources>

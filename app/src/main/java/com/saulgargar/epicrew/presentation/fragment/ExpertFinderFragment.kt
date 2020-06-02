@@ -22,6 +22,7 @@ import com.saulgargar.gnomedata.domain.model.Profession
 import kotlinx.android.synthetic.main.fragment_expert_finder.*
 import org.koin.androidx.viewmodel.compat.ScopeCompat.viewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import kotlin.math.exp
 
 class ExpertFinderFragment : BaseFragment() {
 
@@ -44,6 +45,13 @@ class ExpertFinderFragment : BaseFragment() {
         initListeners()
         initRecyclerView()
         expertFinderViewModel.getProfessions()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (gnomeAdapter.itemCount != 0){
+            instructionsLy.visibility = View.GONE
+        }
     }
 
     private fun initObservers() {

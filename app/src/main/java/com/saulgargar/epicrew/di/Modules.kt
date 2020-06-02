@@ -1,6 +1,8 @@
 package com.saulgargar.epicrew.di
 
+import com.saulgargar.epicrew.presentation.viewmodel.CreatureFinderViewModel
 import com.saulgargar.epicrew.presentation.viewmodel.ExpertFinderViewModel
+import com.saulgargar.epicrew.presentation.viewmodel.NameSearchViewModel
 import com.saulgargar.epicrew.presentation.viewmodel.SplashViewModel
 import com.saulgargar.gnomedata.di.*
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -31,5 +33,13 @@ val viewModelModule: Module = module {
 
     viewModel {
         ExpertFinderViewModel(recoverProfessionsUseCase = get(), recoverGnomesUseCase = get())
+    }
+
+    viewModel {
+        NameSearchViewModel(recoverGnomesUseCase = get())
+    }
+    viewModel {
+        CreatureFinderViewModel(recoverGnomesUseCase = get(),
+                                recoverHairColors = get())
     }
 }

@@ -43,6 +43,9 @@
         <action
             android:id="@+id/action_creatureFinderResultsFragment_to_gnomeProfileFragment"
             app:destination="@id/gnomeProfileFragment" />
+        <argument
+            android:name="physicalFeaturesQuery"
+            app:argType="com.saulgargar.epicrew.presentation.model.PhysicalFeaturesQuery" />
     </fragment>
     <fragment
         android:id="@+id/gnomeProfileFragment"

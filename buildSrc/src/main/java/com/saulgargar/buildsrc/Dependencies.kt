@@ -9,7 +9,7 @@ object Versions{
     const val legacy = "1.0.0"
     const val constraint = "1.1.3"
 
-    const val material = "1.2.0-alpha06"
+    const val material = "1.2.0-beta01"
 
     const val junit = "4.12"
     const val runner = "1.2.0"
@@ -35,6 +35,7 @@ object Versions{
     const val debugDb = "1.0.6"
     const val lottie = "3.4.0"
     const val materialDialogs = "3.3.0"
+    const val rangePicker = "v1.5"
 }
 
 object Kotlin {
@@ -67,10 +68,6 @@ object NavigationComponents {
     const val navUiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navUiKtx}"
 }
 
-object ViewModel {
-    const val lifeCycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifeCycleExtensions}"
-}
-
 object Retrofit  {
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val moshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
@@ -101,4 +98,5 @@ object ThirdPartyLibrary {
     const val debugDb = "com.amitshekhar.android:debug-db:${Versions.debugDb}"
     const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"
     const val materialDialogs = "com.afollestad.material-dialogs:core:${Versions.materialDialogs}"
+    const val rangePicker = "com.github.Chrisvin:RubberPicker:${Versions.rangePicker}"
 }

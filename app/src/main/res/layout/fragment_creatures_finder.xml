@@ -19,6 +19,322 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
+    <LinearLayout
+        android:id="@+id/ageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/titleTv"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <TextView
+            android:fontFamily="@font/caladea_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/age"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/minAgeTv"
+            android:fontFamily="@font/caladea_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorAccent"
+            android:paddingStart="4dp"
+            android:text="@string/zero"
+            android:textSize="16sp" />
+
+        <TextView
+            android:fontFamily="@font/caladea_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingStart="4dp"
+            android:text="@string/dash"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/maxAgeTv"
+            android:fontFamily="@font/caladea_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorAccent"
+            android:paddingStart="4dp"
+            android:text="@string/one_thousand"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <com.jem.rubberpicker.RubberRangePicker
+        android:id="@+id/ageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        app:minValue="0"
+        app:maxValue="100"
+        app:elasticBehavior="linear"
+        app:dampingRatio="0.4"
+        app:stiffness="400"
+        app:stretchRange="36dp"
+        app:defaultThumbRadius="16dp"
+        app:normalTrackWidth="4dp"
+        app:highlightTrackWidth="8dp"
+        app:normalTrackColor="#AAAAAA"
+        app:highlightTrackColor="@color/dark_brown"
+        app:defaultThumbInsideColor="@color/mid_brown"
+        app:highlightDefaultThumbOnTouchColor="@color/light_brown"
+        app:layout_constraintTop_toBottomOf="@id/ageContainer"/>
+
+    <TextView
+        android:fontFamily="@font/caladea_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/zero"
+        android:textSize="20sp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/ageSlider"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/ageZeroTv"
+        android:fontFamily="@font/caladea_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/one_thousand"
+        android:textSize="20sp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/ageSlider"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/weightContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/ageZeroTv"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:fontFamily="@font/caladea_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/weight"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/minWeightTv"
+            android:fontFamily="@font/caladea_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorAccent"
+            android:paddingStart="4dp"
+            android:text="@string/zero"
+            android:textSize="16sp" />
+
+        <TextView
+            android:fontFamily="@font/caladea_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingStart="4dp"
+            android:text="@string/dash"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/maxWeightTv"
+            android:fontFamily="@font/caladea_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorAccent"
+            android:paddingStart="4dp"
+            android:text="@string/one_hundred"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <com.jem.rubberpicker.RubberRangePicker
+        android:id="@+id/weightSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        app:minValue="0"
+        app:maxValue="100"
+        app:elasticBehavior="linear"
+        app:dampingRatio="0.4"
+        app:stiffness="400"
+        app:stretchRange="36dp"
+        app:defaultThumbRadius="16dp"
+        app:normalTrackWidth="4dp"
+        app:highlightTrackWidth="8dp"
+        app:normalTrackColor="#AAAAAA"
+        app:highlightTrackColor="@color/dark_brown"
+        app:defaultThumbInsideColor="@color/mid_brown"
+        app:highlightDefaultThumbOnTouchColor="@color/light_brown"
+        app:layout_constraintTop_toBottomOf="@id/weightContainer"/>
+
+    <TextView
+        android:id="@+id/zeroWeightTv"
+        android:fontFamily="@font/caladea_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/zero"
+        android:textSize="20sp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/weightSlider"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:fontFamily="@font/caladea_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/one_hundred"
+        android:textSize="20sp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/weightSlider"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/HeightContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/zeroWeightTv"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:fontFamily="@font/caladea_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/height"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/minHeightTv"
+            android:fontFamily="@font/caladea_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorAccent"
+            android:paddingStart="4dp"
+            android:text="@string/zero"
+            android:textSize="16sp" />
+
+        <TextView
+            android:fontFamily="@font/caladea_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingStart="4dp"
+            android:text="@string/dash"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/maxHeightTv"
+            android:fontFamily="@font/caladea_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorAccent"
+            android:paddingStart="4dp"
+            android:text="@string/one_hundred"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <com.jem.rubberpicker.RubberRangePicker
+        android:id="@+id/heightSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        app:minValue="0"
+        app:maxValue="100"
+        app:elasticBehavior="linear"
+        app:dampingRatio="0.4"
+        app:stiffness="400"
+        app:stretchRange="36dp"
+        app:defaultThumbRadius="16dp"
+        app:normalTrackWidth="4dp"
+        app:highlightTrackWidth="8dp"
+        app:normalTrackColor="#AAAAAA"
+        app:highlightTrackColor="@color/dark_brown"
+        app:defaultThumbInsideColor="@color/mid_brown"
+        app:highlightDefaultThumbOnTouchColor="@color/light_brown"
+        app:layout_constraintTop_toBottomOf="@id/HeightContainer"/>
+
+    <TextView
+        android:id="@+id/zeroHeightTv"
+        android:fontFamily="@font/caladea_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/zero"
+        android:textSize="20sp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/heightSlider"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:fontFamily="@font/caladea_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/one_hundred"
+        android:textSize="20sp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/heightSlider"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hairColorIl"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hair_color"
+        app:layout_constraintTop_toBottomOf="@+id/zeroHeightTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp">
+
+        <AutoCompleteTextView
+            android:fontFamily="@font/caladea_regular"
+            android:id="@+id/hairColorDd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/searchBt"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_text"
+        android:text="@string/Search"
+        android:layout_marginBottom="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

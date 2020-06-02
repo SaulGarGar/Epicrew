@@ -58,7 +58,7 @@ class ExpertFinderViewModel(private val recoverProfessionsUseCase: RecoverProfes
     }
 
     private fun handleRecoverGnomesFailure(failure: Failure) {
-        _stateGetProfessions.value = State.Failed(failure)
+        _stateRecoverGnomes.value = State.Failed(failure)
     }
 
     fun filterGnomes(id: Int){

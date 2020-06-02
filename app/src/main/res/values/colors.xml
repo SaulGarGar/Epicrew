@@ -9,4 +9,7 @@
     <color name="full_white">#FFFFFF</color>
     <color name="background">#EEEEEE</color>
     <color name="secondary_text">#757575</color>
+    <color name="dark_brown">#795548</color>
+    <color name="mid_brown">#A1887F</color>
+    <color name="light_brown">#8D6E63</color>
 </resources>

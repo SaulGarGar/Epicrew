@@ -43,6 +43,8 @@ class GnomesViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     }
 
     private fun setListener(gnomeItem: GnomeUser, onGnomeItemListener: (gnomeItem: GnomeUser) -> Unit) {
-        itemView.setOnClickListener { onGnomeItemListener.invoke(gnomeItem) }
+        itemView.setOnClickListener {
+            onGnomeItemListener.invoke(gnomeItem)
+        }
     }
 }
