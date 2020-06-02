@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:fontFamily="@font/caladea_bold"
+            android:fontFamily="@font/caladea_regular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -42,7 +42,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textColor="@color/colorAccent"
             android:paddingStart="4dp"
             android:text="@string/zero"
             android:textSize="16sp" />
@@ -62,7 +61,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textColor="@color/colorAccent"
             android:paddingStart="4dp"
             android:text="@string/one_thousand"
             android:textSize="16sp" />
@@ -124,7 +122,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:fontFamily="@font/caladea_bold"
+            android:fontFamily="@font/caladea_regular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -137,7 +135,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textColor="@color/colorAccent"
             android:paddingStart="4dp"
             android:text="@string/zero"
             android:textSize="16sp" />
@@ -157,7 +154,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textColor="@color/colorAccent"
             android:paddingStart="4dp"
             android:text="@string/one_hundred"
             android:textSize="16sp" />
@@ -219,7 +215,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:fontFamily="@font/caladea_bold"
+            android:fontFamily="@font/caladea_regular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -232,7 +228,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textColor="@color/colorAccent"
             android:paddingStart="4dp"
             android:text="@string/zero"
             android:textSize="16sp" />
@@ -252,7 +247,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textColor="@color/colorAccent"
             android:paddingStart="4dp"
             android:text="@string/one_hundred"
             android:textSize="16sp" />
@@ -332,6 +326,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white_text"
         android:text="@string/Search"
+        android:backgroundTint="@color/colorAccent"
         android:layout_marginBottom="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -19,4 +19,5 @@
     <string name="Search">search</string>
     <string name="find_by_name">Find by name</string>
     <string name="dash">-</string>
+    <string name="gnomes_not_found">""</string>
 </resources>

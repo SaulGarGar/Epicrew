@@ -12,5 +12,5 @@ class PhysicalFeaturesQuery: Serializable {
     var minHeight = 0
     var maxHeight = 100
 
-    var hairColor = ""
+    var hairColor: String? = null
 }

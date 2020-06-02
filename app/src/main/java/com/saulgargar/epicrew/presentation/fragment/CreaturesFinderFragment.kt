@@ -39,7 +39,6 @@ class CreaturesFinderFragment : BaseFragment() {
 
     private fun initListeners(){
         hairColorDd.setOnItemClickListener { _, _, position, _ ->
-            getActivityContext().loader.show()
             creatureFinderViewModel.saveHairColor(position)
         }
 
