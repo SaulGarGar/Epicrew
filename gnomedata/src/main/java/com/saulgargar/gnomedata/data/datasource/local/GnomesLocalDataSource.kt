@@ -27,7 +27,10 @@ class GnomesLocalDataSource(private val gnomeDao: GnomeDao,
 
     suspend fun saveHairColors(colors: List<HairColor>) {
         withContext(Dispatchers.IO) {
-            hairColorDao.insertHairColors(colors.map { it.toHairColorDB() }) }
+            hairColorDao.insertHairColors(
+                colors.map {
+                    it.toHairColorDB()
+                }) }
     }
 
     suspend fun recoverHairColors(): List<HairColor> =
@@ -35,7 +38,9 @@ class GnomesLocalDataSource(private val gnomeDao: GnomeDao,
 
     suspend fun saveProfessions(professions: List<Profession>) {
         withContext(Dispatchers.IO) {
-            professionDao.insertProfessions(professions.map { it.toProfessionDB() }) }
+            professionDao.insertProfessions(
+                professions.map {
+                    it.toProfessionDB() }) }
     }
 
     suspend fun recoverProfessions(): List<Profession> =

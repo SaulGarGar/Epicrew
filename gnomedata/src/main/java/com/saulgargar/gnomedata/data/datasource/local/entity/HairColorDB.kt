@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 
 @Entity
 class HairColorDB (
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey(autoGenerate = false)
     val id: Int,
     val color: String
 )
