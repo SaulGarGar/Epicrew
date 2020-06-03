@@ -17,6 +17,6 @@ interface GnomeDao {
     @Query("SELECT * FROM GnomeUserDB WHERE name = :name")
     fun findGnomeByName(name: String): List<GnomeUserDB>
 
-    @Query("SELECT * FROM GnomeUserDB WHERE name = :id")
-    fun findGnomeById(id: Int): GnomeUserDB
+    @Query("SELECT * FROM GnomeUserDB WHERE id = :id")
+    fun recoverGnomeById(id: Int): GnomeUserDB
 }

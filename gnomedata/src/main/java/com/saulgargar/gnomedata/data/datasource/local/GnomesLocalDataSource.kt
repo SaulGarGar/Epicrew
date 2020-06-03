@@ -41,6 +41,6 @@ class GnomesLocalDataSource(private val gnomeDao: GnomeDao,
     suspend fun recoverProfessions(): List<Profession> =
         withContext(Dispatchers.IO) { professionDao.recoverProfessions().map { it.toDomain() } }
 
-    suspend fun findGnomeById(id: Int) =
-        withContext(Dispatchers.IO) {gnomeDao.findGnomeById(id)}
+    suspend fun recoverGnomeById(id: Int) =
+        withContext(Dispatchers.IO) {gnomeDao.recoverGnomeById(id)}
 }

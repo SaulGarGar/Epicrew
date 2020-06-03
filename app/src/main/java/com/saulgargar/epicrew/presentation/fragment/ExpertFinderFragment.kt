@@ -1,28 +1,23 @@
 package com.saulgargar.epicrew.presentation.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
-import android.widget.GridLayout
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.saulgargar.androidext.liveDataObserve
 import com.saulgargar.domain.State
 
 import com.saulgargar.epicrew.R
-import com.saulgargar.epicrew.presentation.adapter.GnomesRecyclerAdapter
-import com.saulgargar.epicrew.presentation.interfaces.OnClickInGnome
+import com.saulgargar.epicrew.presentation.adapter.gnomes.GnomesRecyclerAdapter
 import com.saulgargar.epicrew.presentation.viewmodel.ExpertFinderViewModel
 import com.saulgargar.gnomedata.domain.model.GnomeUser
 import com.saulgargar.gnomedata.domain.model.Profession
 import kotlinx.android.synthetic.main.fragment_expert_finder.*
-import org.koin.androidx.viewmodel.compat.ScopeCompat.viewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import kotlin.math.exp
 
 class ExpertFinderFragment : BaseFragment() {
 
@@ -61,7 +56,8 @@ class ExpertFinderFragment : BaseFragment() {
     }
 
     private fun initAdapter() {
-        gnomeAdapter = GnomesRecyclerAdapter()
+        gnomeAdapter =
+            GnomesRecyclerAdapter()
     }
 
     private fun onRecoverProfessionsStateChange(state: State?) {

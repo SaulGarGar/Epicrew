@@ -15,5 +15,5 @@ interface GnomesRepository {
     suspend fun saveHairColors(colors: List<HairColor>): Either<Failure,Unit>
     suspend fun recoverProfessions(): Either<Failure,List<Profession>>
     suspend fun saveProfessions(professions: List<Profession>): Either<Failure,Unit>
-    suspend fun findGnomeById(id: Int): Either<Failure,GnomeUser>
+    suspend fun recoverGnomeById(id: Int): Either<Failure,GnomeUser>
 }

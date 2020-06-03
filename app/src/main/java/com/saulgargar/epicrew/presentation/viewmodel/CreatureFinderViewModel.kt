@@ -7,7 +7,6 @@ import androidx.lifecycle.viewModelScope
 import com.saulgargar.domain.Failure
 import com.saulgargar.domain.State
 import com.saulgargar.domain.UseCase
-import com.saulgargar.epicrew.presentation.model.Gnome
 import com.saulgargar.epicrew.presentation.model.PhysicalFeaturesQuery
 import com.saulgargar.gnomedata.domain.model.GnomeUser
 import com.saulgargar.gnomedata.domain.model.HairColor

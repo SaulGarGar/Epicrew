@@ -12,4 +12,9 @@
     <color name="dark_brown">#795548</color>
     <color name="mid_brown">#A1887F</color>
     <color name="light_brown">#8D6E63</color>
+    <color name="red_hair">#f44336</color>
+    <color name="green_hair">#AED581</color>
+    <color name="black_hair">#424242</color>
+    <color name="gray_hair">#B0BEC5</color>
+    <color name="pink_hair">#F48FB1</color>
 </resources>

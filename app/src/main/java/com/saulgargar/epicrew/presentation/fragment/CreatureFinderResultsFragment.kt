@@ -11,7 +11,7 @@ import com.saulgargar.androidext.liveDataObserve
 import com.saulgargar.domain.State
 
 import com.saulgargar.epicrew.R
-import com.saulgargar.epicrew.presentation.adapter.GnomesRecyclerAdapter
+import com.saulgargar.epicrew.presentation.adapter.gnomes.GnomesRecyclerAdapter
 import com.saulgargar.epicrew.presentation.viewmodel.CreatureFinderViewModel
 import com.saulgargar.gnomedata.domain.model.GnomeUser
 import kotlinx.android.synthetic.main.fragment_creature_finder_results.*
@@ -66,7 +66,8 @@ class CreatureFinderResultsFragment : BaseFragment() {
     }
 
     private fun initAdapter() {
-        gnomeAdapter = GnomesRecyclerAdapter()
+        gnomeAdapter =
+            GnomesRecyclerAdapter()
     }
 
     private fun initRecyclerView(){

@@ -20,6 +20,7 @@ val useCaseModule: Module = module {
     factory { RecoverProfessionsUseCase(repository = get()) }
     factory { RecoverGnomesUseCase(repository = get()) }
     factory { RecoverHairColors(repository = get()) }
+    factory { RecoverGnomeByIdUseCase(repository = get()) }
 }
 
 val repositoryModule: Module = module {

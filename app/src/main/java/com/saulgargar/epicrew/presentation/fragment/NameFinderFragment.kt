@@ -1,7 +1,6 @@
 package com.saulgargar.epicrew.presentation.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,13 +11,11 @@ import com.saulgargar.androidext.liveDataObserve
 import com.saulgargar.domain.State
 
 import com.saulgargar.epicrew.R
-import com.saulgargar.epicrew.presentation.adapter.GnomesRecyclerAdapter
+import com.saulgargar.epicrew.presentation.adapter.gnomes.GnomesRecyclerAdapter
 import com.saulgargar.epicrew.presentation.viewmodel.NameSearchViewModel
 import com.saulgargar.gnomedata.domain.model.GnomeUser
-import kotlinx.android.synthetic.main.fragment_expert_finder.*
 import kotlinx.android.synthetic.main.fragment_expert_finder.recyclerView
 import kotlinx.android.synthetic.main.fragment_name_finder.*
-import org.koin.androidx.viewmodel.compat.ScopeCompat.viewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class NameFinderFragment : BaseFragment() {
@@ -80,7 +77,8 @@ class NameFinderFragment : BaseFragment() {
     }
 
     private fun initAdapter() {
-        gnomeAdapter = GnomesRecyclerAdapter()
+        gnomeAdapter =
+            GnomesRecyclerAdapter()
     }
 
     private fun initRecyclerView(){

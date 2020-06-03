@@ -1,9 +1,6 @@
 package com.saulgargar.epicrew.di
 
-import com.saulgargar.epicrew.presentation.viewmodel.CreatureFinderViewModel
-import com.saulgargar.epicrew.presentation.viewmodel.ExpertFinderViewModel
-import com.saulgargar.epicrew.presentation.viewmodel.NameSearchViewModel
-import com.saulgargar.epicrew.presentation.viewmodel.SplashViewModel
+import com.saulgargar.epicrew.presentation.viewmodel.*
 import com.saulgargar.gnomedata.di.*
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.loadKoinModules
@@ -41,5 +38,8 @@ val viewModelModule: Module = module {
     viewModel {
         CreatureFinderViewModel(recoverGnomesUseCase = get(),
                                 recoverHairColors = get())
+    }
+    viewModel {
+        GnomeProfileViewModel(recoverGnomeByIdUseCase = get())
     }
 }

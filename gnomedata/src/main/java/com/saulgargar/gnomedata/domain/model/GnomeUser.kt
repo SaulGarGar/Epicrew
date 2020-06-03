@@ -9,5 +9,24 @@ data class GnomeUser(
     val height: Float,
     val hairColor: String,
     val professions: List<String>,
-    val friends: List<String>
-)
+    val friends: List<String>)
+
+fun GnomeUser.toDomain(): Gnome {
+    val gnome = Gnome()
+    gnome.id =  id
+    gnome.name =  name
+    gnome.thumbNail =  thumbNail
+    gnome.age =  age
+    gnome.weight =  weight
+    gnome.hairColor =  hairColor
+    gnome.height =  height
+    gnome.professions =  professions
+    gnome.friends =  friends
+
+    return gnome
+}
+
+
+
+
+

@@ -87,9 +87,9 @@ class GnomesRepositoryImpl(private val networkHandler: NetworkHandler,
         Either.Left(Failure.GenericError(ex))
     }
 
-    override suspend fun findGnomeById(id: Int) = try {
+    override suspend fun recoverGnomeById(id: Int) = try {
         when (networkHandler.isConnected) {
-            true -> Either.Right(localDataSource.findGnomeById(id).toDomain())
+            true -> Either.Right(localDataSource.recoverGnomeById(id).toDomain())
             else -> Either.Left(Failure.NetworkConnection)
         }
     }catch (ex: Exception) {
